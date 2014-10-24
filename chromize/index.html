@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body {
+			position: absolute;
+			font-size: 150px;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			overflow: hidden;
+		}
+
+		.target::before {
+			transition: all .2s;
+
+			position: absolute;
+			top: 25px;
+			height: 100px;
+			left: 70px;
+			width: 10px;
+			content: '';
+			background-color: black;
+		}
+		.target::after {
+			transition: all .3s;
+
+			position: absolute;
+			top: 70px;
+			height: 10px;
+			left: 25px;
+			width: 100px;
+			content: '';
+			background-color: black;
+		}
+
+
+		.error .target::before {
+			background-color: red;
+			-webkit-transform: rotate(45deg);
+		}
+		.error .target::after{ 
+			background-color: red;
+			-webkit-transform: rotate(45deg);
+		}
+
+		.hover .target::before {
+			background-color: green;
+			border-radius: 50%;
+			width: 100px;
+			left: 25px;
+		}
+		.hover .target::after {
+			background-color: white;
+			border-radius: 50%;
+			width: 80px;
+			height: 80px;
+			left: 35px;
+			top: 35px;
+		}
+
+		#save {
+			visibility: hidden;
+			width: 0;
+			height: 0;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="target" />
+	<input type="file" nwdirectory id="save"/>
+	<input type="hidden" id="dirpath"/>
+</body>
+<script type="text/javascript" src="global.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</html>

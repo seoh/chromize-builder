@@ -1,0 +1,20 @@
+{
+  "name": "chromize",
+  "version": "0.1.0",
+  "main": "index.html",
+  "description": "Write once, Run everyhell: apk to chromized directory",
+  "author": "Seoh Char<devthewild@gmail.com>",
+  "license": "BPL",
+  "devDependencies": {
+    "chromeos-apk": "^3.0.0"
+  },
+  "webkit": { "plugin": false },
+  "window": {
+    "title": "Chromize",
+    "width": 150,
+    "height": 150,
+    "resizable": false,
+    "toolbar": false,
+    "fullscreen": false
+  }
+}
